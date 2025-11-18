@@ -33,5 +33,6 @@ pkgs; [
   vlc
   appimage-run
   zed-editor
+  gitg
 ];
 }
