@@ -28,13 +28,13 @@ pkgs; [
   discord
 
   # GNOME specific
-  gnome-tweaks
-  gnome-extension-manager
+  # gnome-tweaks
+  # gnome-extension-manager
 
   # Media
   stable.davinci-resolve
+  gnome-photos
 
-  ghostty
   audacity
   hplipWithPlugin
   fastfetch
