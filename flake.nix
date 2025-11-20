@@ -12,25 +12,18 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
     in {
-      nixosConfigurations = {
-        omnissiah = lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [
-            ./hosts/omnissiah/configuration.nix
-            ./hosts/omnissiah/packages.nix
-            ./modules/automounts.nix
-            ./modules/amdhardware.nix
-          ];
-          nixpkgs.overlays = [
-            (final: prev: {
-              davinci-resolve = nixpkgsStable.legacyPackages.x86_64-linux.davinci-resolve;
-            })
-          ];
-          # If needed, pass nixpkgsStable via specialArgs for other uses:
-          # specialArgs = { inherit nixpkgsStable; };
-        };
+    nixosConfigurations = {
+      omnissiah = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/omnissiah/configuration.nix
+          ./hosts/omnissiah/packages.nix
+          ./modules/automounts.nix
+          ./modules/amdhardware.nix
+          ./modules/stabledavinci.nix
+        ];
       };
-
+    };
       nixosConfigurations = {
         skitarii = lib.nixosSystem {
           inherit system;
@@ -38,6 +31,7 @@
             ./hosts/skitarii/configuration.nix
             ./hosts/skitarii/packages.nix
           ];
+          specialArgs = { inherit nixpkgsStable; }; # Pass nixpkgsStable into modules
        };
     };
   };
