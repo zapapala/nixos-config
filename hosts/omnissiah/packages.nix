@@ -30,8 +30,8 @@ pkgs; [
   discord
 
   # GNOME specific
-  # gnome-tweaks
-  # gnome-extension-manager
+  gnome-tweaks
+  gnome-extension-manager
   mission-center
 
   # Media
