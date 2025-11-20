@@ -3,11 +3,10 @@
 
   inputs = {
     # NixOS official package source, using the nixos-25.05 branch here
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgsStable.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/25.05";
   };
 
-  outputs = { self, nixpkgs, nixpkgsStable, ... }:
+  outputs = { self, nixpkgs, ... }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -20,9 +19,7 @@
           ./hosts/omnissiah/packages.nix
           ./modules/automounts.nix
           ./modules/amdhardware.nix
-          ./modules/stabledavinci.nix
         ];
-        specialArgs = { inherit nixpkgsStable; }; # Pass nixpkgsStable into modules
       };
     };
       nixosConfigurations = {
