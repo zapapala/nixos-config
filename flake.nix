@@ -22,6 +22,7 @@
           ./modules/amdhardware.nix
           ./modules/stabledavinci.nix
         ];
+        specialArgs = { inherit nixpkgsStable; }; # Pass nixpkgsStable into modules
       };
     };
       nixosConfigurations = {
@@ -31,7 +32,6 @@
             ./hosts/skitarii/configuration.nix
             ./hosts/skitarii/packages.nix
           ];
-          specialArgs = { inherit nixpkgsStable; }; # Pass nixpkgsStable into modules
        };
     };
   };

@@ -1,4 +1,4 @@
-{ nixpkgsStable, ... }:
+{ config, pkgs, nixpkgsStable, ... }:
 {
   nixpkgs.overlays = [
     (final: prev: {
