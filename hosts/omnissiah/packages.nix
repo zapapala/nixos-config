@@ -12,21 +12,32 @@
   # Packages
   environment.systemPackages = with
 pkgs; [
-  teams-for-linux
-  telegram-desktop
-  libreoffice-fresh
-  davinci-resolve
-  gnome-tweaks
-  gnome-extension-manager
+
+  # Milcom
   zapzap
-  ghostty
-  audacity
-  discord
-  hplipWithPlugin
+  teams-for-linux
+
+  # Office/Writing
+  libreoffice-fresh
   obsidian
   calibre
-  fastfetch
   zotero
+
+  # Comms
+  telegram-desktop
+  discord
+
+  # GNOME specific
+  gnome-tweaks
+  gnome-extension-manager
+
+  # Media
+  stable.davinci-resolve
+
+  ghostty
+  audacity
+  hplipWithPlugin
+  fastfetch
   solaar
   papers
   plexamp
