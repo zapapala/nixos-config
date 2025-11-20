@@ -22,6 +22,8 @@ pkgs; [
   obsidian
   calibre
   zotero
+  papers
+  zed-editor
 
   # Comms
   telegram-desktop
@@ -30,20 +32,22 @@ pkgs; [
   # GNOME specific
   # gnome-tweaks
   # gnome-extension-manager
+  mission-center
 
   # Media
   stable.davinci-resolve
   gnome-photos
-
   audacity
-  hplipWithPlugin
-  fastfetch
-  solaar
-  papers
-  plexamp
   vlc
+  plexamp
+
+  # Peripherals
+  hplipWithPlugin
+  solaar
+
+  # CLI and utilities
+  fastfetch
   appimage-run
-  zed-editor
-  gitg
+
 ];
 }
