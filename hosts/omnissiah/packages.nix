@@ -9,14 +9,6 @@
 
   programs.obs-studio.enable = true;
 
-  # Overlays
-  nixpkgs.overlays = [
-      (final: prev: {
-        davinci-resolve = import (builtins.getAttr "legacyPackages" nixpkgsStable).x86_64-linux.davinci-resolve;
-        # For newer Nix, try: davinci-resolve = nixpkgsStable.legacyPackages.x86_64-linux.davinci-resolve;
-      })
-    ];
-
   # Packages
   environment.systemPackages = with
 pkgs; [
