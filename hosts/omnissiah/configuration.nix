@@ -37,7 +37,11 @@
   time.timeZone = "Europe/Madrid";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_GB.UTF-8";
+  i18n = {
+    defaultLocale = "en_GB.UTF-8";
+    extraLocales = [ "en_US.UTF-8/UTF-8" "es_ES.UTF-8/UTF-8" ];
+  };
+
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "es_ES.UTF-8";
