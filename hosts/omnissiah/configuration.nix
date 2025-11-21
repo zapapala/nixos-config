@@ -27,6 +27,9 @@
   # Enable bluetooth
   hardware.bluetooth.enable = true;
 
+  # Enable fonts
+  fonts.fontDir.enable = true;
+
   # Enable networking
   networking.networkmanager.enable = true;
 

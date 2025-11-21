@@ -48,6 +48,8 @@ pkgs; [
   # CLI and utilities
   fastfetch
   appimage-run
+  cmatrix
+  btop
 
 ];
 }
