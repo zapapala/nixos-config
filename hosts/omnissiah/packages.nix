@@ -51,12 +51,13 @@ pkgs; [
   cmatrix
   btop
   starship
+];
 
   # Font list
-  fonts.packages = with pkgs; [
+  fonts.packages = with
+  pkgs; [
+
     nerd-fonts.fira-code
     nerd-fonts.droid-sans-mono
-  ];
-
 ];
 }
