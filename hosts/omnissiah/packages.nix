@@ -9,10 +9,6 @@
 
   programs.obs-studio.enable = true;
 
-  ## Starship config
-  programs.starship = {
-    enable = true;
-  };
 
   # Packages
   environment.systemPackages = with

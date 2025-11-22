@@ -2,15 +2,21 @@
   description = "OC Blanco Flake";
 
   inputs = {
+    # Nix Packages and hardware
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/25.05";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
+    # Home Manager
+    home-manager.url = "github:nix-community/home-manager/master";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, nixos-hardware, ... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs-stable, nixos-hardware, home-manager, ... } @ inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
     in {
 
     # Omnissiah desktop
@@ -76,5 +82,12 @@
           ];
        };
     };
+    # Home Manager User
+      homeConfigurations = {
+        ocblanco = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [ ./home.nix ];
+        };
+      };
   };
 }
