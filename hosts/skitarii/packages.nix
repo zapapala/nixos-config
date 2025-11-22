@@ -54,6 +54,7 @@ pkgs; [
   cmatrix
   btop
   starship
+  ghostty
 ];
 
   # Font list
