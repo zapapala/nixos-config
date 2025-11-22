@@ -120,6 +120,13 @@
     };
   };
 
+  environment.shellInit = ''
+    if [ "$SHELL" = "$(which zsh)" ]; then
+      eval "$(starship init zsh)"
+    fi
+  '';
+
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
