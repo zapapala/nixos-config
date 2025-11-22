@@ -78,8 +78,19 @@
     '';
   };
 
-  # Enable Fish shell
-  programs.fish.enable = true;
+  # Shell config
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+
+    shellAliases = {
+      ll = "ls -l";
+      edit = "sudo -e";
+      update = "nixos-rebuild switch --flake /home/ocblanco/.dotfiles/";
+    };
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

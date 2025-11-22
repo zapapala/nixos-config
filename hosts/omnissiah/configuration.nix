@@ -106,8 +106,19 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
-  # Enable Fish shell
-  programs.fish.enable = true;
+  # Shell config
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+
+    shellAliases = {
+      ll = "ls -l";
+      edit = "sudo -e";
+      update = "nixos-rebuild switch --flake /home/ocblanco/.dotfiles/";
+    };
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -134,13 +145,15 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ocblanco = {
     isNormalUser = true;
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
     description = "OC Blanco";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
     ];
   };
+
+
 
   # Install firefox.
   programs.firefox.enable = true;
