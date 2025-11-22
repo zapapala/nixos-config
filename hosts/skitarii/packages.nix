@@ -41,6 +41,9 @@ pkgs; [
   vlc
   plexamp
 
+  # Networking
+  synology-drive-client
+
   # Peripherals
   hplipWithPlugin
   solaar
