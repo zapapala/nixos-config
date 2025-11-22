@@ -9,14 +9,12 @@
 
   programs.obs-studio.enable = true;
 
-  # Specific packages for this host
-  environment.systemPackages = with
-pkgs; [
-  synology-drive-client
-];
 
 environment.systemPackages = with
 pkgs; [
+  # Specific packages for this host
+  synology-drive-client
+
   # Milcom
   zapzap
   teams-for-linux

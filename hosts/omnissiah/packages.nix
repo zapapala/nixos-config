@@ -10,15 +10,11 @@
 
   programs.obs-studio.enable = true;
 
-  # Specific packages for this host
-  environment.systemPackages = with
-pkgs; [
-
-  stable.davinci-resolve
-];
-
 environment.systemPackages = with
 pkgs; [
+
+  # Specific packages for this host
+  stable.davinci-resolve
 
   # Milcom
   zapzap
