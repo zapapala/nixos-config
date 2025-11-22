@@ -15,55 +15,14 @@
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
-  # Enable programs
-  programs.steam = {
-    enable = true;
- 	  extraCompatPackages = [ pkgs.proton-ge-bin ];
-  };
-
-  programs.obs-studio.enable = true;
+  #Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
-     pkgs.hello
-     # Milcom
-     zapzap
-     teams-for-linux
-
-     # Office/Writing
-     libreoffice-fresh
-     obsidian
-     calibre
-     zotero
-     papers
-     zed-editor
-
-     # Comms
-     telegram-desktop
-     discord
-
-     # GNOME specific
-     gnome-tweaks
-     gnome-extension-manager
-     mission-center
-
-     # Media
-     gnome-photos
-     audacity
-     vlc
-     plexamp
-
-     # Peripherals
-     hplipWithPlugin
-     solaar
-
-     # CLI and utilities
-     fastfetch
-     appimage-run
-     cmatrix
-     btop
-     ghostty
+  home.packages = with
+pkgs; [
+     hello
   ];
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -78,7 +37,6 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-  ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -115,7 +73,6 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
     shellAliases = {
       ll = "ls -l";

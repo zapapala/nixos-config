@@ -9,10 +9,14 @@
 
   programs.obs-studio.enable = true;
 
-  # Packages
+  # Specific packages for this host
   environment.systemPackages = with
 pkgs; [
+  synology-drive-client
+];
 
+environment.systemPackages = with
+pkgs; [
   # Milcom
   zapzap
   teams-for-linux
@@ -35,14 +39,10 @@ pkgs; [
   mission-center
 
   # Media
-  stable.davinci-resolve
   gnome-photos
   audacity
   vlc
   plexamp
-
-  # Networking
-  synology-drive-client
 
   # Peripherals
   hplipWithPlugin
@@ -53,7 +53,6 @@ pkgs; [
   appimage-run
   cmatrix
   btop
-  starship
   ghostty
 ];
 
