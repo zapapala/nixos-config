@@ -15,10 +15,56 @@
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
+  # Enable programs
+  programs.steam = {
+    enable = true;
+ 	  extraCompatPackages = [ pkgs.proton-ge-bin ];
+  };
+
+  programs.obs-studio.enable = true;
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
      pkgs.hello
+     # Milcom
+     zapzap
+     teams-for-linux
+
+     # Office/Writing
+     libreoffice-fresh
+     obsidian
+     calibre
+     zotero
+     papers
+     zed-editor
+
+     # Comms
+     telegram-desktop
+     discord
+
+     # GNOME specific
+     gnome-tweaks
+     gnome-extension-manager
+     mission-center
+
+     # Media
+     gnome-photos
+     audacity
+     vlc
+     plexamp
+
+     # Peripherals
+     hplipWithPlugin
+     solaar
+
+     # CLI and utilities
+     fastfetch
+     appimage-run
+     cmatrix
+     btop
+     ghostty
+  ];
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -63,6 +109,45 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+
+  # Shell config
+  ## zsh shell
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+    shellAliases = {
+      ll = "ls -l";
+      edit = "sudo -e";
+      update = "nixos-rebuild switch --flake /home/ocblanco/.dotfiles/";
+    };
+  };
+  ## bash shell
+  programs.bash = {
+    enable = false;
+    shellAliases = {
+      ll = "ls -l";
+      edit = "sudo -e";
+      update = "nixos-rebuild switch --flake /home/ocblanco/.dotfiles/";
+    };
+  };
+
+  # Starship config
+  programs.starship = {
+    enable = true;
+    settings = {
+      add_newline = true;
+      command_timeout = 1300;
+      scan_timeout = 50;
+      format = "$all$nix_shell$nodejs$lua$golang$rust$php$git_branch$git_commit$git_state$git_status\n$username$hostname$directory";
+      character = {
+        success_symbol = "[](bold green) ";
+        error_symbol = "[✗](bold red) ";
+      };
+    };
+  };
+
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
