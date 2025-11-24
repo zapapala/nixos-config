@@ -139,6 +139,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  services.printing.drivers = [ pkgs.hplipWithPlugin ];
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -164,7 +165,7 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "OC Blanco";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "lp" ];
     packages = with pkgs; [
     #  thunderbird
     ];
