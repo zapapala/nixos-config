@@ -26,6 +26,7 @@ pkgs; [
   zotero
   papers
   zed-editor
+  readest
 
   # Comms
   telegram-desktop
