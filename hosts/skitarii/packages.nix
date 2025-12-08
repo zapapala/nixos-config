@@ -24,9 +24,7 @@ pkgs; [
   obsidian
   calibre
   zotero
-  papers
   zed-editor
-  readest
 
   # Comms
   telegram-desktop
@@ -38,7 +36,6 @@ pkgs; [
   mission-center
 
   # Media
-  gnome-photos
   audacity
   vlc
   plexamp
@@ -47,12 +44,16 @@ pkgs; [
   hplipWithPlugin
   solaar
 
+
   # CLI and utilities
   fastfetch
   appimage-run
   cmatrix
   btop
   ghostty
+  localsend
+  lazygit
+  gearlever
 ];
 
   # Font list

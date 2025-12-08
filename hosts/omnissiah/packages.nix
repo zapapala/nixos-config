@@ -25,7 +25,6 @@ pkgs; [
   obsidian
   calibre
   zotero
-  papers
   zed-editor
 
   # Comms
@@ -36,9 +35,10 @@ pkgs; [
   gnome-tweaks
   gnome-extension-manager
   mission-center
+  papers
+  gnome-photos
 
   # Media
-  gnome-photos
   audacity
   vlc
   plexamp
@@ -53,6 +53,9 @@ pkgs; [
   cmatrix
   btop
   ghostty
+  localsend
+  lazygit
+  gearlever
 ];
 
 

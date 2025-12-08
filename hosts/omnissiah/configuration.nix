@@ -33,6 +33,9 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Enable LocalSend
+  programs.localsend.enable = true;
+
   # Set your time zone.
   time.timeZone = "Europe/Madrid";
 
@@ -65,10 +68,21 @@
     options = [ "noatime" "relatime" "nofail" ];
   };
 
+  # Enable garbage collection
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
+
+  nix.optimise = {
+    automatic = true;
+    dates = [ "weekly" ];
+  };
 
   # Enable the GNOME Desktop Environment.
-  # services.xserver.displayManager.gdm.enable = true;
-  # services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
 
   # Enable the COSMIC Desktop Environment
@@ -84,6 +98,17 @@
   #security.pam.services.swaylock = {};
   #programs.waybar.enable = true; # top bar
   #environment.systemPackages = with pkgs; [ alacritty fuzzel swaylock mako swayidle ]
+
+  # Enable KDE Plasma
+  # services.xserver.enable = true; # optional
+  # services.displayManager.sddm.enable = true;
+  # services.displayManager.sddm.wayland.enable = true;
+  # services.desktopManager.plasma6.enable = true;
+
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    konsole
+    elisa
+  ];
 
 
   # Configure keymap in X11
@@ -139,6 +164,18 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
+  # Enable Mullvad VPN service
+  services.mullvad-vpn.enable = true;
+  services.mullvad-vpn.package = pkgs.mullvad-vpn;
+
+
+  # Enable Sunshine streaming
+  services.sunshine = {
+      enable = true;
+      autoStart = true;
+      capSysAdmin = true;
+      openFirewall = true;
+    };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

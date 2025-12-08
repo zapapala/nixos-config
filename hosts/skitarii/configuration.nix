@@ -34,6 +34,9 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Enable LocalSend
+  programs.localsend.enable = true;
+
   # Set your time zone.
   time.timeZone = "Europe/Madrid";
 
@@ -50,6 +53,18 @@
     LC_PAPER = "es_ES.UTF-8";
     LC_TELEPHONE = "es_ES.UTF-8";
     LC_TIME = "es_ES.UTF-8";
+  };
+
+  # Enable garbage collection
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
+
+  nix.optimise = {
+    automatic = true;
+    dates = [ "weekly" ];
   };
 
   # Enable the X11 windowing system.
@@ -77,6 +92,13 @@
       flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
     '';
   };
+
+  # Enable Tailscale
+  services.tailscale.enable = true;
+  services.tailscale.useRoutingFeatures = "both";
+  services.resolved.enable = true;
+  services.resolved.domains = [ "~." ];
+
 
   # Shell config
   programs.zsh = {
@@ -108,6 +130,10 @@
   };
 
 
+  # Enable Mullvad VPN service
+  services.mullvad-vpn.enable = true;
+  services.mullvad-vpn.package = pkgs.mullvad-vpn;
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -133,7 +159,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ocblanco = {
     isNormalUser = true;
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     description = "OC Blanco";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
