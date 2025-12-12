@@ -28,7 +28,16 @@
   hardware.bluetooth.enable = true;
 
   # Enable fonts
-  fonts.fontDir.enable = true;
+  fonts = {
+    fontDir.enable = true;
+    fontconfig.enable = true;
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      corefonts
+      vista-fonts
+    ];
+  };
+
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -120,6 +129,12 @@
   # Configure console keymap
   console.keyMap = "us-acentos";
 
+  # Enable virtualisation
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+  services.qemuGuest.enable = true;
+  services.spice-vdagentd.enable = true;  # enable copy and paste between host and guest
+
   # Enable flatpak
   services.flatpak.enable = true;
   systemd.services.flatpak-repo = {
@@ -205,7 +220,7 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "OC Blanco";
-    extraGroups = [ "networkmanager" "wheel" "lp" ];
+    extraGroups = [ "networkmanager" "wheel" "lp" "libvirtd" ];
     packages = with pkgs; [
     #  thunderbird
     ];

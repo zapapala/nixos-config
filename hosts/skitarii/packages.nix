@@ -34,6 +34,7 @@ pkgs; [
   gnome-tweaks
   gnome-extension-manager
   mission-center
+  morewaita-icon-theme
 
   # Media
   audacity

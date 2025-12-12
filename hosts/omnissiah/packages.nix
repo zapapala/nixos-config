@@ -37,6 +37,7 @@ pkgs; [
   mission-center
   papers
   gnome-photos
+  morewaita-icon-theme
 
   # Media
   audacity
