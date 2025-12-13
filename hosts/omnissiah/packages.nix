@@ -9,6 +9,9 @@
   };
 
   programs.obs-studio.enable = true;
+  services.qbittorrent.enable = true;
+  programs.zoom-us.enable = true;
+
 
 environment.systemPackages = with
 pkgs; [
@@ -43,6 +46,7 @@ pkgs; [
   audacity
   vlc
   plexamp
+  parabolic
 
   # Peripherals
   hplipWithPlugin
