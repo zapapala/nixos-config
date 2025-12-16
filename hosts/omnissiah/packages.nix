@@ -10,7 +10,7 @@
 
   programs.obs-studio.enable = true;
   services.qbittorrent.enable = true;
-  programs.zoom-us.enable = true;
+  services.hardware.openrgb.enable = true;
 
 
 environment.systemPackages = with
@@ -42,11 +42,13 @@ pkgs; [
   gnome-photos
   morewaita-icon-theme
 
-  # Media
+  # Media and Games
   audacity
   vlc
   plexamp
   parabolic
+  faugus-launcher
+  protonplus
 
   # Peripherals
   hplipWithPlugin
@@ -61,6 +63,11 @@ pkgs; [
   localsend
   lazygit
   gearlever
+  yad
+  unzip
+  xdotool
+  unixtools.xxd
+  xorg.xwininfo
 ];
 
 

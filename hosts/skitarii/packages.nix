@@ -8,7 +8,6 @@
   };
 
   programs.obs-studio.enable = true;
-  programs.zoom-us.enable = true;
 
 environment.systemPackages = with
 pkgs; [
@@ -36,11 +35,12 @@ pkgs; [
   mission-center
   morewaita-icon-theme
 
-  # Media
+  # Games and Media
   audacity
   vlc
   plexamp
   parabolic
+  protonplus
 
   # Peripherals
   hplipWithPlugin
@@ -56,6 +56,11 @@ pkgs; [
   localsend
   lazygit
   gearlever
+  yad
+  unzip
+  xdotool
+  unixtools.xxd
+  xorg.xwininfo
 ];
 
   # Font list
