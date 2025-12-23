@@ -135,6 +135,7 @@
   services.qemuGuest.enable = true;
   services.spice-vdagentd.enable = true;  # enable copy and paste between host and guest
 
+
   # Enable flatpak
   services.flatpak.enable = true;
   systemd.services.flatpak-repo = {

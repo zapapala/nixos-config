@@ -49,6 +49,9 @@ pkgs; [
   parabolic
   faugus-launcher
   protonplus
+  gamescope
+  gamemode
+  heroic
 
   # Peripherals
   hplipWithPlugin
@@ -68,6 +71,7 @@ pkgs; [
   xdotool
   unixtools.xxd
   xorg.xwininfo
+  winboat
 ];
 
 

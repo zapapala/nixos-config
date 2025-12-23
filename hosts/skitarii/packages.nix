@@ -41,6 +41,9 @@ pkgs; [
   plexamp
   parabolic
   protonplus
+  gamescope
+  gamemode
+  heroic
 
   # Peripherals
   hplipWithPlugin
