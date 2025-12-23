@@ -12,7 +12,7 @@
 environment.systemPackages = with
 pkgs; [
   # Specific packages for this host
-  synology-drive-client
+  # synology-drive-client # Outdated atm. Use Flatpak instead.
 
   # Milcom
   zapzap

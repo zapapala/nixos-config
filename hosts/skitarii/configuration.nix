@@ -159,7 +159,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ocblanco = {
     isNormalUser = true;
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
     description = "OC Blanco";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
