@@ -28,6 +28,7 @@ pkgs; [
   # Comms
   telegram-desktop
   discord
+  brave
 
   # GNOME specific
   gnome-tweaks
