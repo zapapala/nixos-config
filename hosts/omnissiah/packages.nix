@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
 
@@ -18,6 +18,7 @@ pkgs; [
 
   # Specific packages for this host
   stable.davinci-resolve
+  inputs.nix-citizen.packages.${system}.rsi-launcher
 
   # Milcom
   zapzap
@@ -45,10 +46,9 @@ pkgs; [
 
   # Media and Games
   audacity
-  vlc
+  mpv
   plexamp
   parabolic
-  faugus-launcher
   protonplus
   gamescope
   gamemode
