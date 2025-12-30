@@ -30,6 +30,7 @@ pkgs; [
   calibre
   zotero
   zed-editor
+  homebank
 
   # Comms
   telegram-desktop
@@ -37,11 +38,11 @@ pkgs; [
   brave
 
   # GNOME specific
-  gnome-tweaks
-  gnome-extension-manager
-  mission-center
-  papers
-  gnome-photos
+  # gnome-tweaks
+  # gnome-extension-manager
+  # mission-center
+  # papers
+  # gnome-photos
   morewaita-icon-theme
 
   # Media and Games
@@ -73,6 +74,7 @@ pkgs; [
   unixtools.xxd
   xorg.xwininfo
   winboat
+  impression
 ];
 
 

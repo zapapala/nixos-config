@@ -24,6 +24,7 @@ pkgs; [
   calibre
   zotero
   zed-editor
+  homebank
 
   # Comms
   telegram-desktop
@@ -65,6 +66,7 @@ pkgs; [
   xdotool
   unixtools.xxd
   xorg.xwininfo
+  impression
 ];
 
   # Font list
