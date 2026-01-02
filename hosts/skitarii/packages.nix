@@ -37,6 +37,9 @@ pkgs; [
   mission-center
   morewaita-icon-theme
 
+  # KDE Plasma specific
+  # libsForQt5.qtstyleplugin-kvantum
+
   # Games and Media
   audacity
   vlc

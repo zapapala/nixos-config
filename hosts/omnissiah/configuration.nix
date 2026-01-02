@@ -35,6 +35,7 @@
     packages = with pkgs; [
       corefonts
       vista-fonts
+      adwaita-fonts
     ];
   };
 

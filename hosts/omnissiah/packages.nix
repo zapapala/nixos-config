@@ -43,7 +43,10 @@ pkgs; [
   # mission-center
   # papers
   # gnome-photos
-  morewaita-icon-theme
+  # morewaita-icon-theme
+
+  # KDE Plasma specific
+  libsForQt5.qtstyleplugin-kvantum
 
   # Media and Games
   audacity

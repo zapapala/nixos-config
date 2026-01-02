@@ -28,6 +28,19 @@
   # Enable bluetooth
   hardware.bluetooth.enable = true;
 
+  # Enable fonts
+  fonts = {
+    fontDir.enable = true;
+    fontconfig.enable = true;
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      corefonts
+      vista-fonts
+      adwaita-fonts
+    ];
+  };
+
+
   # Enable Power Profiles Daemon
   services.power-profiles-daemon.enable = true;
 
