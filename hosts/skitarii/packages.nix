@@ -70,13 +70,9 @@ pkgs; [
   unixtools.xxd
   xorg.xwininfo
   impression
+
+  # Icons
+  papirus-nord
 ];
 
-  # Font list
-  fonts.packages = with
-  pkgs; [
-
-    nerd-fonts.fira-code
-    nerd-fonts.droid-sans-mono
-];
 }

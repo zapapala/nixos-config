@@ -37,6 +37,8 @@
       corefonts
       vista-fonts
       adwaita-fonts
+      nerd-fonts.fira-code
+      nerd-fonts.droid-sans-mono
     ];
   };
 
