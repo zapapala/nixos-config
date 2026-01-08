@@ -70,6 +70,12 @@
     LC_TIME = "es_ES.UTF-8";
   };
 
+  # Enable Waydroid. Remember to run sudo waydroid init -s GAPPS -f to initialize.
+  virtualisation.waydroid = {
+    enable = true;
+    package = pkgs.waydroid-nftables;
+  };
+
   # Enable garbage collection
   nix.gc = {
     automatic = true;
