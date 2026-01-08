@@ -189,6 +189,7 @@
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
 
 
+
   # Enable Sunshine streaming
   services.sunshine = {
       enable = true;

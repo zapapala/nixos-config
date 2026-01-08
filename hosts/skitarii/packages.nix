@@ -17,6 +17,7 @@ pkgs; [
   # Milcom
   zapzap
   teams-for-linux
+  zoom-us
 
   # Office/Writing
   libreoffice-fresh

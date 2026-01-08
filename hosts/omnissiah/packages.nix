@@ -23,6 +23,7 @@ pkgs; [
   # Milcom
   zapzap
   teams-for-linux
+  zoom-us
 
   # Office/Writing
   libreoffice-fresh
@@ -47,6 +48,7 @@ pkgs; [
 
   # KDE Plasma specific
   libsForQt5.qtstyleplugin-kvantum
+  kdePackages.kcalc
 
   # Media and Games
   audacity
