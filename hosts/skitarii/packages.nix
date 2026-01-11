@@ -26,6 +26,11 @@ pkgs; [
   zotero
   zed-editor
   homebank
+  hunspell
+  hunspellDicts.en_US
+  hunspellDicts.en_GB-large
+  hunspellDicts.en_GB-ize
+  hunspellDicts.es_ES
 
   # Comms
   telegram-desktop
@@ -40,6 +45,8 @@ pkgs; [
 
   # KDE Plasma specific
   # libsForQt5.qtstyleplugin-kvantum
+  # kdePackages.kcalc
+  # libreoffice-qt
 
   # Games and Media
   audacity

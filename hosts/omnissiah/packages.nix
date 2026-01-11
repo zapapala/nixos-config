@@ -19,6 +19,7 @@ pkgs; [
   # Specific packages for this host
   stable.davinci-resolve
   inputs.nix-citizen.packages.${system}.rsi-launcher
+  kdePackages.kdenlive
 
   # Milcom
   zapzap
@@ -26,12 +27,17 @@ pkgs; [
   zoom-us
 
   # Office/Writing
-  libreoffice-fresh
+  # libreoffice-fresh
   obsidian
   calibre
   zotero
   zed-editor
   homebank
+  hunspell
+  hunspellDicts.en_US
+  hunspellDicts.en_GB-large
+  hunspellDicts.en_GB-ize
+  hunspellDicts.es_ES
 
   # Comms
   telegram-desktop
@@ -49,6 +55,7 @@ pkgs; [
   # KDE Plasma specific
   libsForQt5.qtstyleplugin-kvantum
   kdePackages.kcalc
+  libreoffice-qt
 
   # Media and Games
   audacity
