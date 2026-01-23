@@ -68,7 +68,6 @@ pkgs; [
   appimage-run
   cmatrix
   btop
-  ghostty
   localsend
   lazygit
   gearlever
