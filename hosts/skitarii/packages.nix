@@ -17,7 +17,6 @@ pkgs; [
   # Milcom
   zapzap
   teams-for-linux
-  zoom-us
 
   # Office/Writing
   libreoffice-fresh
@@ -57,6 +56,7 @@ pkgs; [
   gamescope
   gamemode
   heroic
+  retroarch-full
 
   # Peripherals
   hplipWithPlugin
@@ -78,9 +78,15 @@ pkgs; [
   unixtools.xxd
   xorg.xwininfo
   impression
+  ventoy-full-gtk
 
   # Icons
   papirus-nord
 ];
+
+nixpkgs.config.permittedInsecurePackages = [
+                "ventoy-qt5-1.1.07"
+              ];
+
 
 }

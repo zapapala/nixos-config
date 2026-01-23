@@ -24,7 +24,6 @@ pkgs; [
   # Milcom
   zapzap
   teams-for-linux
-  zoom-us
 
   # Office/Writing
   # libreoffice-fresh
@@ -59,13 +58,14 @@ pkgs; [
 
   # Media and Games
   audacity
-  mpv
+  vlc
   plexamp
   parabolic
   protonplus
   gamescope
   gamemode
   heroic
+  retroarch-full
 
   # Peripherals
   hplipWithPlugin
@@ -87,10 +87,17 @@ pkgs; [
   xorg.xwininfo
   winboat
   impression
+  ventoy-full-qt
+  gnome-disk-utility
+  python315
+  gphoto2
 
   # Icons
   papirus-nord
 ];
 
+nixpkgs.config.permittedInsecurePackages = [
+                "ventoy-qt5-1.1.07"
+              ];
 
 }
