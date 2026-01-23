@@ -150,6 +150,9 @@
     };
   };
 
+  # Enable appimage support
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
 
   # Enable Mullvad VPN service
   services.mullvad-vpn.enable = true;
