@@ -41,20 +41,19 @@ pkgs; [
   # Comms
   telegram-desktop
   discord
-  brave
 
   # GNOME specific
-  # gnome-tweaks
-  # gnome-extension-manager
-  # mission-center
-  # papers
-  # gnome-photos
-  # morewaita-icon-theme
+  gnome-tweaks
+  gnome-extension-manager
+  mission-center
+  papers
+  gnome-photos
+  morewaita-icon-theme
 
   # KDE Plasma specific
-  libsForQt5.qtstyleplugin-kvantum
-  kdePackages.kcalc
-  libreoffice-qt
+  #libsForQt5.qtstyleplugin-kvantum
+  #kdePackages.kcalc
+  #libreoffice-qt
 
   # Media and Games
   audacity
@@ -76,7 +75,6 @@ pkgs; [
   appimage-run
   cmatrix
   btop
-  ghostty
   localsend
   lazygit
   gearlever
@@ -85,9 +83,8 @@ pkgs; [
   xdotool
   unixtools.xxd
   xorg.xwininfo
-  winboat
   impression
-  ventoy-full-qt
+  ventoy-full-gtk
   gnome-disk-utility
   python315
   gphoto2
@@ -97,7 +94,7 @@ pkgs; [
 ];
 
 nixpkgs.config.permittedInsecurePackages = [
-                "ventoy-qt5-1.1.07"
+                "ventoy-gtk-1.1.07"
               ];
 
 }
