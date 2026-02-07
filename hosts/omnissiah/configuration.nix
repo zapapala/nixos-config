@@ -74,15 +74,9 @@
 
   # Automount game SSD
   fileSystems."/mnt/games" = {
-    device = "/dev/disk/by-uuid/d97c0093-5369-4460-8d24-3a2051f115c9";
+    device = "/dev/disk/by-uuid/0532fd37-f22f-46a1-b55e-013531ff43c7";
     fsType = "ext4";
     options = [ "noatime" "relatime" "nofail" ];
-  };
-
-  # Enable Waydroid. Remember to run sudo waydroid init -s GAPPS -f to initialize.
-  virtualisation.waydroid = {
-    enable = true;
-    package = pkgs.waydroid-nftables;
   };
 
   # Enable garbage collection
@@ -188,10 +182,6 @@
   # Enable appimage support
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
-
-  # Enable Mullvad VPN service
-  services.mullvad-vpn.enable = true;
-  services.mullvad-vpn.package = pkgs.mullvad-vpn;
 
 
 

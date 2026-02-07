@@ -26,7 +26,7 @@ pkgs; [
   teams-for-linux
 
   # Office/Writing
-  # libreoffice-fresh
+  libreoffice-fresh
   obsidian
   calibre
   zotero
@@ -88,13 +88,14 @@ pkgs; [
   gnome-disk-utility
   python315
   gphoto2
+  brave
 
   # Icons
   papirus-nord
 ];
 
 nixpkgs.config.permittedInsecurePackages = [
-                "ventoy-gtk-1.1.07"
+                "ventoy-gtk3-1.1.07"
               ];
 
 }

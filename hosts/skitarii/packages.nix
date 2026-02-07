@@ -77,6 +77,7 @@ pkgs; [
   xorg.xwininfo
   impression
   ventoy-full-gtk
+  brave
 
   # Icons
   papirus-nord
