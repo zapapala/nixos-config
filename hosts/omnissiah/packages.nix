@@ -20,6 +20,7 @@ pkgs; [
   stable.davinci-resolve
   inputs.nix-citizen.packages.${system}.rsi-launcher
   kdePackages.kdenlive
+  virtio-win  # Windows virtio drivers ISO
 
   # Milcom
   zapzap
@@ -41,6 +42,8 @@ pkgs; [
   # Comms
   telegram-desktop
   discord
+  revolt-desktop
+  element-desktop
 
   # GNOME specific
   gnome-tweaks

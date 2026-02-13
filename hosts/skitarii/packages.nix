@@ -34,6 +34,7 @@ pkgs; [
   # Comms
   telegram-desktop
   discord
+  element-desktop
 
   # GNOME specific
   gnome-tweaks
