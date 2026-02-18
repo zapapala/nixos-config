@@ -42,7 +42,6 @@ pkgs; [
   # Comms
   telegram-desktop
   discord
-  revolt-desktop
   element-desktop
 
   # GNOME specific
@@ -67,7 +66,6 @@ pkgs; [
   gamescope
   gamemode
   heroic
-  retroarch-full
 
   # Peripherals
   hplipWithPlugin
@@ -87,7 +85,7 @@ pkgs; [
   unixtools.xxd
   xorg.xwininfo
   impression
-  ventoy-full-gtk
+  #ventoy-full-gtk
   gnome-disk-utility
   python315
   gphoto2
