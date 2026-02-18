@@ -92,8 +92,8 @@
   };
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  #services.xserver.displayManager.gdm.enable = true;
+  #services.xserver.desktopManager.gnome.enable = true;
 
 
   # Enable the COSMIC Desktop Environment
@@ -111,16 +111,16 @@
   #environment.systemPackages = with pkgs; [ alacritty fuzzel swaylock mako swayidle ]
 
   # Enable KDE Plasma
-  # services.xserver.enable = true; # optional
-  # services.displayManager.sddm.enable = true;
-  # services.displayManager.sddm.wayland.enable = true;
-  # services.desktopManager.plasma6.enable = true;
-  # programs.kdeconnect.enable = true;
+  #services.xserver.enable = true; # optional
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  programs.kdeconnect.enable = true;
 
 
-  # environment.plasma6.excludePackages = with pkgs.kdePackages; [
-  #  elisa
-  # ];
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    elisa
+   ];
 
 
   # Configure keymap in X11
