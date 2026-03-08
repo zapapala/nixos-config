@@ -102,14 +102,6 @@
   # services.desktopManager.cosmic.xwayland.enable = true;
 
 
-  # Enable Niri WM
-  #programs.niri.enable = true;
-  #security.polkit.enable = true; # polkit
-  #services.gnome.gnome-keyring.enable = true; # secret service
-  #security.pam.services.swaylock = {};
-  #programs.waybar.enable = true; # top bar
-  #environment.systemPackages = with pkgs; [ alacritty fuzzel swaylock mako swayidle ]
-
   # Enable KDE Plasma
   #services.xserver.enable = true; # optional
   services.displayManager.sddm.enable = true;
@@ -169,21 +161,6 @@
     };
   };
 
-  # Starship config
-  programs.starship = {
-    enable = true;
-    settings = {
-      add_newline = true;
-      command_timeout = 1300;
-      scan_timeout = 50;
-      format = "$all$nix_shell$nodejs$lua$golang$rust$php$git_branch$git_commit$git_state$git_status\n$username$hostname$directory";
-      character = {
-        success_symbol = "[](bold green) ";
-        error_symbol = "[✗](bold red) ";
-      };
-    };
-  };
-
 
   # Enable appimage support
   programs.appimage.enable = true;
@@ -225,7 +202,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ocblanco = {
     isNormalUser = true;
-    shell = pkgs.zsh;
+    shell = pkgs.bash;
     description = "OC Blanco";
     extraGroups = [ "networkmanager" "wheel" "lp" "libvirtd" ];
     packages = with pkgs; [
@@ -246,7 +223,7 @@
     wget
     curl
     git
-    neovim
+    nano
   ];
 
   # Nice
