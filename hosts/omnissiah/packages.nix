@@ -32,7 +32,6 @@ pkgs; [
   calibre
   zotero
   zed-editor
-  homebank
   hunspell
   hunspellDicts.en_US
   hunspellDicts.en_GB-large
@@ -45,16 +44,16 @@ pkgs; [
   element-desktop
 
   # GNOME specific
-  gnome-tweaks
-  gnome-extension-manager
-  mission-center
-  papers
-  gnome-photos
-  morewaita-icon-theme
+  #gnome-tweaks
+  #gnome-extension-manager
+  #mission-center
+  #papers
+  #gnome-photos
+  #morewaita-icon-theme
 
   # KDE Plasma specific
   #libsForQt5.qtstyleplugin-kvantum
-  #kdePackages.kcalc
+  kdePackages.kcalc
   #libreoffice-qt
 
   # Media and Games
@@ -77,7 +76,6 @@ pkgs; [
   cmatrix
   btop
   localsend
-  lazygit
   gearlever
   yad
   unzip
@@ -85,11 +83,9 @@ pkgs; [
   unixtools.xxd
   xorg.xwininfo
   impression
-  #ventoy-full-gtk
   gnome-disk-utility
   python315
   gphoto2
-  brave
 
   # Icons
   papirus-nord
