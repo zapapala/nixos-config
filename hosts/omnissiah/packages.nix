@@ -27,7 +27,7 @@ pkgs; [
   teams-for-linux
 
   # Office/Writing
-  libreoffice-fresh
+  #libreoffice-fresh
   obsidian
   calibre
   zotero
@@ -42,6 +42,9 @@ pkgs; [
   telegram-desktop
   discord
   element-desktop
+  brave
+  thunderbird
+  inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
   # GNOME specific
   #gnome-tweaks
@@ -54,11 +57,10 @@ pkgs; [
   # KDE Plasma specific
   #libsForQt5.qtstyleplugin-kvantum
   kdePackages.kcalc
-  #libreoffice-qt
+  libreoffice-qt
 
   # Media and Games
   audacity
-  vlc
   plexamp
   parabolic
   protonplus
@@ -72,11 +74,9 @@ pkgs; [
 
   # CLI and utilities
   fastfetch
-  appimage-run
   cmatrix
   btop
   localsend
-  gearlever
   yad
   unzip
   xdotool
@@ -86,6 +86,7 @@ pkgs; [
   gnome-disk-utility
   python315
   gphoto2
+  tesseract
 
   # Icons
   papirus-nord

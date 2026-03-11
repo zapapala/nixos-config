@@ -7,6 +7,7 @@
     nixpkgs-stable.url = "github:NixOS/nixpkgs/25.05";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nix-citizen.url = "github:LovingMelody/nix-citizen";
+    zen-browser.url = "github:youwen5/zen-browser-flake";
   };
 
   outputs = { self, nixpkgs, nixpkgs-stable, nixos-hardware, ... } @ inputs:

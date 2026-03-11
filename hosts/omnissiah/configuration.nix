@@ -125,12 +125,12 @@
   console.keyMap = "us-acentos";
 
   # Enable virtualisation
-  virtualisation.libvirtd = {
-    enable = true;
-    qemu = {
-      swtpm.enable = true;
-    };
-  };
+  #virtualisation.libvirtd = {
+    #enable = true;
+    #qemu = {
+      #swtpm.enable = true;
+    #};
+  #};
 
   programs.virt-manager.enable = true;
   services.qemuGuest.enable = true;
@@ -175,6 +175,7 @@
       capSysAdmin = true;
       openFirewall = true;
     };
+
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
